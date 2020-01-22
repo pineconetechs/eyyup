@@ -1,9 +1,12 @@
 package com.architecture.controller;
 
+import com.architecture.Service.PictureService;
+import com.architecture.entitiy.PictureEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +19,10 @@ import java.io.IOException;
 
 @Controller
     public class MainController {
+    @Autowired
+    PictureService pictureService;
+
+
     @RequestMapping("/")
     public ModelAndView page() {
 
@@ -33,7 +40,9 @@ import java.io.IOException;
     }
 
     @RequestMapping("/portfolio.html")
-    public ModelAndView port() {
+    public ModelAndView port(Model model) {
+        PictureEntity pictureEntity=pictureService.findPicture(1);
+        model.addAttribute("picture",pictureEntity);
 
         ModelAndView modelAndView = new ModelAndView("portfolio");
 
@@ -48,11 +57,11 @@ import java.io.IOException;
         return modelAndView;
     }
 
-    @Autowired
-    public JavaMailSender javaMailSender;
+/*    @Autowired
+    public JavaMailSender javaMailSender;*/
 
 
-    @PostMapping("/")
+/*    @PostMapping("/")
     public String sendMail(@RequestParam("name") String name, @RequestParam("subject") String subject, @RequestParam("email") String email, @RequestParam("phone") String phone, @RequestParam("text") String text)
             throws MessagingException, IOException {
 
@@ -77,7 +86,7 @@ import java.io.IOException;
         return "index";
 
 
-    }
+    }*/
 
 }
 
