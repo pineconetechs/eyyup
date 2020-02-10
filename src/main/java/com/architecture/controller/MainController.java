@@ -1,7 +1,5 @@
 package com.architecture.controller;
 
-import com.architecture.Service.PictureService;
-import com.architecture.entitiy.PictureEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -10,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.mail.MessagingException;
@@ -19,11 +16,10 @@ import java.io.IOException;
 
 @Controller
     public class MainController {
-    @Autowired
-    PictureService pictureService;
 
 
-    @RequestMapping("/")
+
+    @RequestMapping("/index.html")
     public ModelAndView page() {
 
         ModelAndView modelAndView = new ModelAndView("index");
@@ -41,10 +37,19 @@ import java.io.IOException;
 
     @RequestMapping("/portfolio.html")
     public ModelAndView port(Model model) {
-        PictureEntity pictureEntity=pictureService.findPicture(1);
-        model.addAttribute("picture",pictureEntity);
+        /*PictureEntity pictureEntity=pictureService.findPicture(1);
+        model.addAttribute("picture",pictureEntity);*/
 
         ModelAndView modelAndView = new ModelAndView("portfolio");
+
+        return modelAndView;
+    }
+    @RequestMapping("/portfolio2.html")
+    public ModelAndView port2(Model model) {
+        /*PictureEntity pictureEntity=pictureService.findPicture(1);
+        model.addAttribute("picture",pictureEntity);*/
+
+        ModelAndView modelAndView = new ModelAndView("portfolio2");
 
         return modelAndView;
     }
@@ -57,12 +62,12 @@ import java.io.IOException;
         return modelAndView;
     }
 
-/*    @Autowired
-    public JavaMailSender javaMailSender;*/
+   @Autowired
+    public JavaMailSender javaMailSender;
 
 
-/*    @PostMapping("/")
-    public String sendMail(@RequestParam("name") String name, @RequestParam("subject") String subject, @RequestParam("email") String email, @RequestParam("phone") String phone, @RequestParam("text") String text)
+  @PostMapping("/sendMail")
+    public String sendMail( @RequestParam(required=false,name="name") String name, @RequestParam(required=false,name="subject") String subject, @RequestParam(required=false,name="mail") String mail, @RequestParam(required=false,name="phone") String phone, @RequestParam(required=false,name="text") String text)
             throws MessagingException, IOException {
 
 
@@ -70,14 +75,15 @@ import java.io.IOException;
 
         // true = multipart message
         MimeMessageHelper helper = new MimeMessageHelper(msg, true);
-        helper.setTo("eyyup.guzel@ozu.edu.tr");
+        helper.setTo("eyyupguzel47@gmail.com");
 
 
-        helper.setSubject("Subject");
+
+        helper.setSubject(subject);
 
 
         // true = text/html
-        helper.setText(name + "\n" + email + "\n" + phone + "\n" + text, false);
+        helper.setText( name + "\n" + mail + "\n" + phone + "\n" + text, false);
 
 
         javaMailSender.send(msg);
@@ -86,7 +92,7 @@ import java.io.IOException;
         return "index";
 
 
-    }*/
+    }
 
 }
 

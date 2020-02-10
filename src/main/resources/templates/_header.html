@@ -1,11 +1,36 @@
 <header class="header-area" th:fragment="header" xmlns:th="http://www.thymeleaf.org/">
+    <link href="css/cerez.css" rel="stylesheet">
+    <script type="text/javascript" src="js/cerez.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#646478"
+                    },
+                    "button": {
+                        "background": "red",
+                        "text": "#ffffff"
+                    }
+                },
+                "theme": "classic",
+                "content": {
+                    "message": "Bu internet sitesinde, kullanıcı deneyimini geliştirmek ve internet sitesinin verimli çalışmasını sağlamak amacıyla çerezler kullanılmaktadır.",
+                    "dismiss": "Tamam",
+                    "link": "Çerez politikamızı incelemek için tıklayınız.",
+                    "href": "CerezPol.pdf"
+                }
+            })
+        });
+    </script>
+
     <a href="index.html" class="logo-area">
         <img src="img/logo.png" alt="">
     </a>
     <div class="nav-switch">
         <i class="fa fa-bars"></i>
     </div>
-    <div class="phone-number">Tel no gelecek</div>
+    <div class="phone-number">+90 5452570515</div>
     <nav class="nav-menu">
         <ul>
             <li><a href="index.html">Ana Sayfa</a></li>

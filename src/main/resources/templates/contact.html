@@ -40,12 +40,11 @@
 	<!-- Page header section start -->
 	<section class="page-header-section set-bg" data-setbg="img/header-bg-2.jpg">
 		<div class="container">
-			<h1 class="header-title">Contact<span>.</span></h1>
+			<h1 class="header-title">İLETİŞİM<span>.</span></h1>
 		</div>
 	</section>
 	<!-- Page header section end -->
-
-
+	<main id="main">
 	<!-- Page section start -->
 	<section class="page-section pt100">
 		<div class="container pb100">
@@ -56,7 +55,11 @@
 				<div class="col-lg-3 contact-info mb-5 mb-lg-0">
 					<p>Adres: Yukarı dudullu esenşehir mahllesi gürkan sokak no.18/7 </p>
 					<p>Telefon: +90 545 257 05 15</p>
-					<p>Email: eyyupguzel47@gmail.com</p>
+					<p>Email: eyyupguzel47@gmail.com</p>,
+					<iframe
+							src="https://maps.google.com/maps?q=metrocorner%20dudullu&t=k&z=13&ie=UTF8&iwloc=&output=embed"
+							width="200" height="140" frameborder="0" style="border: 0;"
+							allowfullscreen=""></iframe>
 					<div class="cf-social">
 						<a href="#"><i class="fa fa-google-plus"></i></a>
 						<a href="#"><i class="fa fa-pinterest"></i></a>
@@ -64,23 +67,23 @@
 						<a href="#"><i class="fa fa-twitter"></i></a>
 					</div>
 				</div>
+
 				<div class="col-lg-9">
-					<form class="contact-form">
-						<input type="text"  id="subject" placeholder="Başlık Giriniz">
-						<input type="text"  id="name" placeholder="Adınız ve Soyadınız">
-						<input type="text" id="mail" placeholder="Mailinizi Giriniz">
-						<input type="text" id="phone" placeholder="Telefonunuzu Giriniz">
-						<textarea placeholder="Mesajınız" id="text"></textarea>
-						<button class="site-btn sb-dark" >Gönder</button>
-					</form>
-				</div>
+				<form class="contact-form" method="post" enctype="multipart/form-data" th:action="@{/sendMail}">
+					<input type="text" class="form-control"  required name="subject" id="subject" placeholder="Başlık Giriniz" >
+					<input type="text" class="form-control" required name="name" id="name" placeholder="Adınız ve Soyadınız" >
+					<input type="text" class="form-control" required name="mail" id="mail" placeholder="Mailinizi Giriniz" >
+					<input type="text" class="form-control" required name="phone" id="phone" placeholder="Telefonunuzu Giriniz">
+					<textarea placeholder="Mesajınız" required name="text" class="form-control" id="text"></textarea>
+					<button class="site-btn sb-dark"  type="submit"  id="sendbtn">Gönder</button>
+				</form>
+			</div>
 			</div>
 		</div>
-		<div class="map-area" id="map-canvas"></div>
+		<!--<div class="map-area" id="map-canvas"></div>-->
 	</section>
 	<!-- Page section end -->
-
-
+	</main>
 
 	<!-- Footer section start -->
 	<div th:replace="_footer :: footer"></div>
@@ -99,8 +102,8 @@
 	<script src="js/main.js"></script>
 
 	<!-- load for map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YyDTa0qqOjIerob2VTIwo_XVMhrruxo"></script>
-	<script src="js/map.js"></script>
+<!--	<script src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.1467278698583!2d29.136153615181005!3d40.93445133191384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac69e243b42fd%3A0x68ab8d7dcdc0e554!2sMALTE%20BUSINESS%20CENTER!5e0!3m2!1str!2str!4v1568818477296!5m2!1str!2str"></script>
+	<script src="js/map.js"></script>-->
 
 </body>
 </html>
