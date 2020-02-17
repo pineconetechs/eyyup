@@ -62,6 +62,27 @@ import java.io.IOException;
         return modelAndView;
     }
 
+
+
+    @RequestMapping("/service.html")
+    public ModelAndView service() {
+
+        ModelAndView modelAndView = new ModelAndView("service");
+
+        return modelAndView;
+    }
+
+    @RequestMapping("/projectdetails.html")
+    public ModelAndView projectdetails() {
+
+        ModelAndView modelAndView = new ModelAndView("projectdetails");
+
+        return modelAndView;
+    }
+
+
+
+
    @Autowired
     public JavaMailSender javaMailSender;
 

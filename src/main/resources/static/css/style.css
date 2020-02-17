@@ -57,7 +57,7 @@ h4 {
 
 p {
 	font-size: 15px;
-	color: #727272;
+	color: #000000;
 	line-height: 2;
 }
 
@@ -482,9 +482,15 @@ ol {
 	text-transform: uppercase;
 	margin-right: 30px;
 	font-size: 14px;
-	color: #fff;
-	font-weight: 500;
+	color: black;
+	font-weight: 700;
 	position: relative;
+	background: #baff00;
+	letter-spacing: 1px;
+
+
+
+
 }
 
 .nav-menu ul li a:after {
@@ -589,7 +595,7 @@ ol {
 	margin-right: 30px;
 	font-size: 14px;
 	font-weight: 700;
-	color: #fff;
+	color: black;
 	letter-spacing: 1px;
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
@@ -1806,6 +1812,7 @@ ol {
 	}
 	.hero-right-text {
 		right: 100px;
+		color: #baff00;
 	}
 }
 
@@ -1813,6 +1820,7 @@ ol {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.logo-area {
 		padding: 20px 40px 30px;
+		background: #baff00;
 	}
 	.slide-content {
 		margin-left: 170px;
@@ -1843,7 +1851,9 @@ ol {
 	.nav-menu ul li a {
 		margin-right: 5px;
 		font-size: 13px;
+
 		padding: 37px 7px 5px;
+		background: #baff00;
 	}
 	.phone-number {
 		font-size: 12px;

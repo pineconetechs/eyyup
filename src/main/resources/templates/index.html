@@ -2,13 +2,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
 	<title>Arcade - Architecture</title>
-
-
-
-
-
-
-
 	<meta charset="UTF-8">
 	<meta name="description" content="Arcade - Architecture Template">
 	<meta name="keywords" content="arcade, architecture, onepage, creative, html">
@@ -32,11 +25,6 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-
-
-
-
-
 </head>
 <body>
 <!-- Page Preloder -->
@@ -46,35 +34,7 @@
 
 <!-- Header section start -->
 <div th:replace="_header :: header"></div>
-<link href="css/cerez.css" rel="stylesheet">
-<script type='text/javascript' src="js/cerez.js"></script>
-<script>
-	window.addEventListener("load", function(){
-		window.cookieconsent.initialise({
-			"palette": {
-				"popup": {
-					"background": "#646478",
-					"text": "#ffffff"
-				},
-				"button": {
-					"background": "red",
-					"text": "#ffffff"
-				}
-			},
-			"theme": "classic", // kullanabileceğiniz temalar block, edgeless, classic
-// "type": "opt-out", gizle uyarısını aktif etmek için
-// "position": "top", aktif ederseniz uyarı üst kısımda görünür
-// "position": "top", "static": true, aktif ederseniz uyarı üst kısımda sabit olarak görünür
-// "position": "bottom-left", aktif ederseniz uyarı solda görünür
-//"position": "bottom-right", aktif ederseniz uyarı sağda görünür
-			"content": {
-				"message": "Sitemizden en iyi şekilde faydalanabilmeniz için çerezler kullanılmaktadır. Bu siteye giriş yaparak çerez kullanımını kabul etmiş sayılıyorsunuz.",
-				"dismiss": "Tamam",
-				"link": "Daha fazla bilgi",
-				"href": "CerezPol.pdf"
-			}
-		})});
-</script>
+
 
 <!-- Header section end -->
 
@@ -95,7 +55,7 @@
 	</div>
 	<!-- hero slider area -->
 	<div class="hero-slider">
-		<div class="hero-slide-item set-bg" data-setbg="img/bg.jpg">
+		<div class="hero-slide-item set-bg" data-setbg="img/kapak.JPG">
 			<div class="slide-inner">
 				<div class="slide-content">
 					<h2>Amigra <br>Studio </h2>
@@ -112,7 +72,7 @@
 		</div>
 	</div>
 	<div class="slide-num-holder" id="snh-1"></div>
-	<div class="hero-right-text">mimarlık</div>
+	<div class="hero-right-text" style="color: #baff00">mimarlık</div>
 </section>
 <!-- Hero section end -->
 
@@ -123,7 +83,13 @@
 		<div class="row">
 			<div class="col-lg-7 intro-text mb-5 mb-lg-0">
 				<h2 class="sp-title">Biz yaratıcı bir Mimarlık<span>Stüdyosuyuz</span></h2>
-				<p>Bu kısma sizi tanıtan bir yazı gelecek. </p>
+				<p>Amigra Studio Architecture yurtiçi
+					ve yurt dışı mimari proje, proje danişmanlık ,
+					proje yönetimi,kentsel dönüşüm, Yapı güçlendirme projeleri,
+					tadilat ve  hizmetleri ile  taahhüt işlerini güncel
+					teknik gelişmelere bağlı, yerel ve dünya standartlarında
+					çevreci bir yaklaşım anlayışı ile gerçekleştiren bir firmadır.
+				</p>
 
 			</div>
 			<div class="col-lg-5 pt-4">
@@ -136,10 +102,10 @@
 
 
 <!-- Service section start -->
-<section class="service-section spad">
+<section class="service-section spad" id="services">
 	<div class="container">
 		<div class="section-title">
-			<h2>Services(Bu kısma çalıştığınız alanlar ve açıklamaları gelecek.</h2>
+			<h2>Faaliyet Alanlarımız</h2>
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-md-6">
@@ -149,8 +115,9 @@
 							<img src="img/icon/dark/1.png" alt="">
 						</div>
 					</div>
-					<h3>Plan ve Projeler</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
+					<h3>Mimari Proje Hizmeti</h3>
+					<p>Proje Hizmetimiz; parselizasyon hizmeti ile başlayıp avam proje, mimari uygulama, statik,
+						ekanik, elektrik projeleri, jeoloji raporu, yapı EKB ve 3d çalışmalarını kapsamaktadır.</p>
 
 				</div>
 			</div>
@@ -161,9 +128,9 @@
 							<img src="img/icon/dark/2.png" alt="">
 						</div>
 					</div>
-					<h3>Kavramsal Mimari</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-
+					<h3>Proje Danışmanlık Hizmeti</h3>
+					<p>Yapı –İnşaat firmalarında
+						teknik personel hizmeti ve kalifiyeli personel ihtiyacı hizmeti vermekteyiz. </p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
@@ -173,9 +140,8 @@
 							<img src="img/icon/dark/3.png" alt="">
 						</div>
 					</div>
-					<h3>Apartman Binaları</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-
+					<h3>Taahhüt işleri</h3>
+					<p> Kamu ve özel sektörde her türlü üst yapı işlerini yapmaktayız.</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
@@ -185,8 +151,9 @@
 							<img src="img/icon/dark/4.png" alt="">
 						</div>
 					</div>
-					<h3>Gökdelen Binaları</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
+					<h3>Kentsel Dönüşüm</h3>
+					<p>Kentsel dönüşüm danışmanlık hizmeti, Emsal hesabı,
+						kat karşılığı yapı yapma, kentsel dönüşüm kredi başvurusu vb. hizmetlerin yapılması</p>
 
 				</div>
 			</div>
@@ -197,8 +164,9 @@
 							<img src="img/icon/dark/5.png" alt="">
 						</div>
 					</div>
-					<h3>Dökümentasyon</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
+					<h3>Yapı Performans analizi</h3>
+					<p>Yapının zemin etüdü ve performans analizi
+						yapılarak deprem riskine karşı yapı davranışı ve raporlama hizmeti yapılır.</p>
 
 				</div>
 			</div>
@@ -209,8 +177,9 @@
 							<img src="img/icon/dark/6.png" alt="">
 						</div>
 					</div>
-					<h3>Restorant Projeleri</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
+					<h3>Tadilat İşleri</h3>
+					<p>Firmamız bünyesinde gerekli tüm sertifikalara sahip kalifiyeli personeller
+						ile teknik kadro kontrolünde her türlü tadilat işlerini kontrollü ve güvenli bir şekilde icra etmekteyiz.</p>
 
 				</div>
 			</div>
@@ -222,28 +191,28 @@
 
 
 <!-- CTA section start -->
-<section class="cta-section pt100 pb50">
-	<div class="cta-image-box"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content">
-				<h2 class="sp-title">Blog  <span>Sayfası</span></h2>
-				<iframe src="http://www.architangent.com/blog/" width="1000" height="500"></iframe>
-				<div class="cta-icons">
-					<div class="cta-img-icon">
-						<img src="img/icon/light/1.png" alt="">
-					</div>
-					<div class="cta-img-icon">
-						<img src="img/icon/light/2.png" alt="">
-					</div>
-					<div class="cta-img-icon">
-						<img src="img/icon/color/3.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<!--<section class="cta-section pt100 pb50">-->
+<!--	<div class="cta-image-box"></div>-->
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+<!--			<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content">-->
+<!--				<h2 class="sp-title">Blog  <span>Sayfası</span></h2>-->
+<!--				<iframe src="https://www.facultyofmimarlik.com/blog" width="750" height="500"></iframe>-->
+<!--				<div class="cta-icons">-->
+<!--					<div class="cta-img-icon">-->
+<!--						<img src="img/icon/light/1.png" alt="">-->
+<!--					</div>-->
+<!--					<div class="cta-img-icon">-->
+<!--						<img src="img/icon/light/2.png" alt="">-->
+<!--					</div>-->
+<!--					<div class="cta-img-icon">-->
+<!--						<img src="img/icon/color/3.png" alt="">-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</section>-->
 <!-- CTA section end -->
 
 
@@ -253,25 +222,25 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-6">
 				<div class="milestone">
-					<h2>14</h2>
+					<h2>7</h2>
 					<p>Yıllık <br>Tecrübe</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="milestone">
-					<h2>237</h2>
+					<h2>72</h2>
 					<p>Yapılan <br>Proje</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="milestone">
-					<h2>10B</h2>
+					<h2>2B</h2>
 					<p>Sosyal <br>Takipçi</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="milestone">
-					<h2>12</h2>
+					<h2>2</h2>
 					<p>Kazanılan <br>Ödül</p>
 				</div>
 			</div>
@@ -287,7 +256,7 @@
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="section-title">
-					<h1>Projeler</h1>
+					<h1>PORTFOLYO</h1>
 				</div>
 			</div>
 			<div class="col-lg-9">
@@ -301,77 +270,180 @@
 		</div>
 	</div>
 	<div id="projects-carousel" class="projects-slider">
-		<div class="single-project set-bg rest" data-setbg="img/projects/1.jpg">
+		<div class="single-project set-bg rest" data-setbg="img/Muze/1.jpg">
 			<div class="project-content">
-				<h2>Büyük <br> Restorasyonlar</h2>
-				<p>Jan 19, 2018</p>
-				<a href="portfolio.html" class="seemore">Projeyi Görüntüle </a>
+				<h2>Antakya <br> Müze Otel</h2>
+
 			</div>
 		</div>
-		<div class="single-project set-bg build" data-setbg="img/projects/2.jpg">
+
+
+
+		<div class="single-project set-bg rest" data-setbg="img/Muze/muze2.jpg">
 			<div class="project-content">
-				<h2>Ofis <br> Binası</h2>
-				<p>Jan 19, 2018</p>
-				<a href="portfolio.html" class="seemore">Projeyi Görüntüle</a>
+				<h2>Antakya <br> Müze Otel</h2>
+
 			</div>
 		</div>
-		<div class="single-project set-bg apart" data-setbg="img/projects/3.jpg">
+		<div class="single-project set-bg rest" data-setbg="img/Muze/muze3.jpg">
 			<div class="project-content">
-				<h2>İyi <br> Apartmanlar</h2>
-				<p>Jan 19, 2018</p>
-				<a href="portfolio.html" class="seemore">Projeyi Görüntüle </a>
+				<h2>Antakya <br> Müze Otel</h2>
+
 			</div>
 		</div>
-		<div class="single-project set-bg rest" data-setbg="img/projects/4.jpg">
+		<div class="single-project set-bg rest" data-setbg="img/bozova/1.JPG">
 			<div class="project-content">
-				<h2>Büyük <br>Restorasyonlar</h2>
-				<p>Jan 19, 2018</p>
-				<a href="portfolio.html" class="seemore">Projeyi Görüntüle </a>
+				<h2>Bozova <br>Lojman</h2>
+
 			</div>
 		</div>
-		<div class="single-project set-bg apart" data-setbg="img/projects/2.jpg">
+		<div class="single-project set-bg rest" data-setbg="img/cezayir/1.jpg">
 			<div class="project-content">
-				<h2>Office <br> Binası</h2>
-				<p>Jan 19, 2018</p>
-				<a href="portfolio.html" class="seemore">Projeyi Görüntüle </a>
+				<h2>Cezayir <br>Rezidans Villa</h2>
+
 			</div>
 		</div>
+		<div class="single-project set-bg rest" data-setbg="img/cezayir/2.jpg">
+			<div class="project-content">
+				<h2>Cezayir <br>Rezidans Villa</h2>
+
+			</div>
+		</div>
+		<div class="single-project set-bg rest" data-setbg="img/cezayir/3.jpg">
+			<div class="project-content">
+				<h2>Cezayir <br> Rezidans Villa</h2>
+
+			</div>
+		</div>
+		<div class="single-project set-bg rest" data-setbg="img/anaokul/1.JPG">
+			<div class="project-content">
+				<h2>Çankırı <br>Anaokul</h2>
+
+			</div>
+		</div>
+		<div class="single-project set-bg rest" data-setbg="img/dcity/1.jpg">
+			<div class="project-content">
+				<h2>Irak Süleymaniye <br>Daniel City</h2>
+
+			</div>
+		</div>
+		<div class="single-project set-bg rest" data-setbg="img/havuz/1.JPG">
+			<div class="project-content">
+				<h2>ŞanlıUrfa <br> Havuz </h2>
+
+			</div>
+		</div>
+		<div class="single-project set-bg rest" data-setbg="img/havuz/2.JPG">
+			<div class="project-content">
+				<h2>ŞanlıUrfa <br>Havuz </h2>
+
+			</div>
+		</div>
+		<div class="single-project set-bg rest" data-setbg="img/ltfkirdar/1.jpg">
+			<div class="project-content">
+				<h3>İstanbul <br>Dr. Lütfi Kırdar Eğitim ve Araştırma Hastanesi</h3>
+
+			</div>
+		</div>
+		<div class="single-project set-bg rest" data-setbg="img/iraq/1.jpg">
+			<div class="project-content">
+				<h2>Irak <br>Süleymaniye Akra Hastanesi</h2>
+
+			</div>
+		</div>
+
+
 	</div>
 </div>
 
 
 <!-- Projects section end -->
 
-
+<div style="margin: auto" class="col-lg-3">
+	<div class="section-title">
+		<h1>MÜŞTERİLERİMİZ</h1>
+	</div>
+</div>
 <!-- Clients section start -->
 <div class="client-section spad">
 	<div class="container">
 		<div id="client-carousel" class="client-slider">
 			<div class="single-brand">
 				<a href="#">
-					<img src="img/clients/1.png" alt="">
+					<img src="img/clients/1.jpg" alt="">
 				</a>
 			</div>
 			<div class="single-brand">
 				<a href="#">
-					<img src="img/clients/2.png" alt="">
+					<img src="img/clients/2.jpg" alt="">
+				</a>
+			</div>
+
+
+
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/3.jpg" alt="">
 				</a>
 			</div>
 			<div class="single-brand">
 				<a href="#">
-					<img src="img/clients/3.png" alt="">
+					<img src="img/clients/4.jpg" alt="">
 				</a>
 			</div>
 			<div class="single-brand">
 				<a href="#">
-					<img src="img/clients/4.png" alt="">
+					<img src="img/clients/5.jpg "alt="">
+				</a>
+			</div>
+
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/6.png" alt="">
 				</a>
 			</div>
 			<div class="single-brand">
 				<a href="#">
-					<img src="img/clients/5.png" alt="">
+					<img src="img/clients/7.jpg" alt="">
 				</a>
 			</div>
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/8.jpg" alt="">
+				</a>
+			</div>
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/9.jpg" alt="">
+				</a>
+			</div>
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/10.jpg" alt="">
+				</a>
+			</div>
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/11.jpg" alt="">
+				</a>
+			</div>
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/12.jpg" alt="">
+				</a>
+			</div>
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/13.png" alt="">
+				</a>
+			</div>
+			<div class="single-brand">
+				<a href="#">
+					<img src="img/clients/14.png" alt="">
+				</a>
+			</div>
+
+
 		</div>
 	</div>
 </div>
